@@ -2,7 +2,7 @@ public class Ensyu_2 {
 
 	public static void main(String[] args) {
 
-//定数
+		//定数
 		final String CAKE_SH= "ショートケーキ";
 		final int PRICE_CAKE_SH = 320 ;
 		final String CAKE_MN= "モンブラン";
@@ -14,23 +14,24 @@ public class Ensyu_2 {
 		final String CAKE_CHE= "チーズケーキ";
 		final int PRICE_CAKE_CHE = 300 ;
 
-		String cakeName = "";
 		//ケーキの名前
-		int cakeCount = 0 ;
+		String cakeName = "";
 		//ケーキの個数
-		int totalPrice = 0;
+		int cakeCount = 0 ;
 		//ケーキの合計金額
-		int payment = 0 ;
+		int totalPrice = 0;
 		//支払い金額
-		int checkCakePrice  = 0;
+		int payment = 0 ;
 		//処理対象のケーキの値段
+		int checkCakePrice  = 0;
 
-		int discountApplying = 1000	;
 		//適用される割引
-		double discount = 0.8;
+		final int discountApplying = 1000;
 		//割引
-		double tax = 1.08;
+		final double discount = 0.8;
 		//消費税
+		final double tax = 1.08;
+
 
 		for (int i = 0 ; i < args.length ; i++) {
 			if(i % 2 == 0) {
