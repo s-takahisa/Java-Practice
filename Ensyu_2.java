@@ -64,12 +64,12 @@ public class Ensyu_2 {
 				payment = (int) (totalPrice * tax);
 			}
 
-			System.out.println("合計金額は" + payment + "円です。");
+
 
 
 		}
 
-
+		System.out.println("合計金額は" + payment + "円です。");
 	}
 
 }
