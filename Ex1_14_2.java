@@ -35,6 +35,8 @@ public class Ex1_14_2 {
 	static int calcTaxPayment( int result ){        //アンダーバーを適切な内容に書き換えてください
 		//消費税
 		final double TAX = 1.08;
+		int taxIncludedPrice = (int)(result*TAX);
+		return taxIncludedPrice ;
 
 
 
@@ -52,7 +54,7 @@ public class Ex1_14_2 {
 	static int discount( int result ){            //アンダーバーを適切な内容に書き換えてください
 		//引数が1000円以上の場合5000円以下の場合
 		final int DISCOUNT_RANGE1 = 1000;
-		//引数として受け取った値が5000円以下の場合
+		//引数として受け取った値が5000円以以上の場合
 		final int DISCOUNT_RANGE2 = 5000;
 		//割引が10%以下
 		final double DISOUNT__VALUE1 = 0.1;
@@ -60,17 +62,18 @@ public class Ex1_14_2 {
 		final double DISCOUNT_VALUE2 = 0.2;
 		//上限5000円の場合
 		final int DICOUNT_MAX= 5000;
-		//結果
+
 
 		//resultが1000円以上5000円以下の場合
 		if(DISCOUNT_RANGE1 <= result && result <= DISCOUNT_RANGE2) {
-			result = (int)(result - DISOUNT__VALUE1);
-		//resultが5009円を超えた場合
+			result = (int)((result - DISCOUNT_RANGE1)*DISOUNT__VALUE1);
+		//resultが5000円を超えた場合
 		}else if(result > DICOUNT_MAX){
-			result = (int)(result - DISCOUNT_VALUE2);
+			result = (int)((result - DISCOUNT_RANGE2)*DISCOUNT_VALUE2);
 		}else {
 
 		}
+		return result;
 
 
 	}
