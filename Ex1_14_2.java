@@ -44,6 +44,7 @@ public class Ex1_14_2 {
 	**  - 割引金額の上限は5000円とする
 	*/
 
+	//
 	/*値引きのdiscountメソッドの仮引数をint型のresultと定義する。*/
 	static int discount( int result ){            //アンダーバーを適切な内容に書き換えてください
 		//引数が1000円以上の場合5000円以下の場合
