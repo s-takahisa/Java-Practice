@@ -7,7 +7,7 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Kintai_1_a {
+public class Kintai_1 {
 
 	public static void main(String[] args) {
 		//  WorkingResult.csvのパス ※「C:\WorkSpace」直下に配置していない場合は適宜変更してください。
