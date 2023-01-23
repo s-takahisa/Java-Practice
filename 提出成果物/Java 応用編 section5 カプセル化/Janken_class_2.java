@@ -1,4 +1,4 @@
-package Const;
+package Kapsel;
 
 public class Janken_class_2 {
 

@@ -21,8 +21,7 @@ class Referee {
 
 		//プレイヤーの手のメソッド
 		void refPlayerHand(Player_class_2 playerHands) {
-			// ※握らせる前に「じゃんけん・・・ぽん！！！！！１」というメッセージを画面に表示。
-			System.out.println(referee +"「じゃんけん・・・ぽん！！！！！」");
+
 			//それぞれのプレイヤーがどんな手を出したか、それぞれ審判が確認する。
 			//「グー」だった場合
 			if( (playerHands.handStatus).equals(JANKEN_GHU)) {

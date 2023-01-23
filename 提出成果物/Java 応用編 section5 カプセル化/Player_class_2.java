@@ -1,13 +1,13 @@
-package Const;
-class Player_class {
+package Kapsel;
+class Player_class_2 {
 
 	/* ・フィールド　初期化しないこと
 	 - name (String型)			プレイヤー名
 	 - handStatus(String型)		ジャンケンの手 */
-		//名前
-		String name;
-		//出す手
-		String handStatus;
+		//名前をprivateで設定
+	    private String name;
+		//出す手をprivateで設定
+		private String handStatus;
 		//ジャンケンの手を定義
 		final String JANKEN_GHU= "グー";
 		final String JANKEN_CHOKI = "チョキ";
@@ -18,14 +18,15 @@ class Player_class {
 	 	//＜処理＞
 	 	//引数で受け取った文字列をnameに設定。
 
-		Player_class(String temporaryName){
+		//コンストラクタ
+		public Player_class_2(String temporaryName){
 			this.name = temporaryName;
 		}
 
 	 	// mandStatusメソッド
 	 	//	mandStatus
 	 	//	＜引数/戻り値＞なし
-		void makeHandStatus(){
+		public void makeHandStatus(){
 			//ジャンケンの手を受け取った時ランダムに設定する。
 			int jankenRandam = (int)(Math.random() * 3);
 		 	//	＜処理＞
@@ -43,6 +44,17 @@ class Player_class {
 			}
 
 		}
+
+		//getter、setter
+		//nameのgetter getName()で定義
+		public String getName() {
+			return this.name;
+		}
+		//handStatusのgettrer
+		public String getHandStatus() {
+			return this.handStatus;
+		}
+
 }
 
 
