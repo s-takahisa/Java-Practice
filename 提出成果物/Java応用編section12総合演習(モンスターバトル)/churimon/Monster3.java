@@ -70,9 +70,8 @@ public class Monster3 {
 		this.lv = level;
 		//レベルが1以上の時、レベルに見合った分のステータスの上昇する。
 		if (level > 1) {
-			levelUp(level + 1);
+			levelUp(level);
 		//レベルが1の時、ステータスに変化がない。
-		} else if (level == 1) {
 		}
 	}
 
@@ -157,8 +156,8 @@ public class Monster3 {
 		//HP>ダメージであればダメージを差し引いた値 をHPに代入
 		if (hp > resultDamage) {
 			hp = hp - resultDamage;
-			//HP<ダメージであればHPに0を代入します。
-		} else if (hp < resultDamage) {
+			//ダメージがHP以上であればHPに0を代入します。
+		} else if (hp <= resultDamage) {
 			hp = 0;
 		}
 		//実際に受けるダメージ(int型)

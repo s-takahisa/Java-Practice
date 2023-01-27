@@ -29,7 +29,7 @@ class TestMonster {
 		//Monster3の検証
 		//検証対象のクラスをインスタンス化
 		Monster3 t3 = new Monster3();
-		t3.levelUp(3);
+		t3.levelUp(0);
 		t3.setWaza("たいあたり", "1.0");
 		t3.getStatus();
 		t3.useWaza();

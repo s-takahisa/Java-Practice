@@ -110,8 +110,8 @@ public class Monster1 {
 		//HP>ダメージであればダメージを差し引いた値 をHPに代入
 		if (hp > resultDamage) {
 			hp = hp - resultDamage;
-			//HP<ダメージであればHPに0を代入します。
-		} else if (hp < resultDamage) {
+			//ダメージがHPがダメージ以上であればHPに0を代入します。
+		} else if (hp <= resultDamage) {
 			hp = 0;
 		}
 		//実際に受けるダメージ(int型)
