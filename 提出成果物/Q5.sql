@@ -1,0 +1,10 @@
+##問5
+##名前の中に「田」が入っている社員
+##EMPLOYEE_MSTテーブルをemMst
+SELECT emMst.EMPLOYEE_ID , emMst.EMPLOYEE_NM
+	FROM EMPLOYEE_MST emMst
+	WHERE  emMst.EMPLOYEE_NM LIKE '%田%'
+ORDER BY emMst.EMPLOYEE_ID ;
+
+
+
