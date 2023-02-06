@@ -1,0 +1,13 @@
+##問8
+
+##EMPLOYEE_MSTテーブルをemMst、EMPLOYEE_ENROLLMENTをemEnr、DIVISION_MSTをdivMst、EMPLOYEE_CAREER_HSTをemCar
+SELECT emMst.EMPLOYEE_ID, emMst.EMPLOYEE_NM,
+		#部署長フラグには社員が部署長でない場合0、それ以外は1と表示
+		 CASE WHEN divMst.MANAGER_ID IS NULL THEN 0 
+		 	  ELSE 1 END  AS MANAGER_FLAG
+  FROM EMPLOYEE_MST emMst INNER JOIN EMPLOYEE_ENROLLMENT emEnr
+                          ON emMst.EMPLOYEE_ID = emEnr.EMPLOYEE_ID
+                     	  LEFT OUTER JOIN DIVISION_MST divMst
+                          ON emMst.EMPLOYEE_ID = divMst.MANAGER_ID
+WHERE emEnr.RETIRED_FLG = 0  
+ORDER BY emMst.EMPLOYEE_ID ;	
